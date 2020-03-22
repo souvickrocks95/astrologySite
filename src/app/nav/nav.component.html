@@ -1,0 +1,53 @@
+<mat-toolbar style="background-color:  #191817;" color="primary" class="fix-nav">
+    <button type="button" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+   <!--  <div class="nav-brand"> 
+        Snehashis Astrology
+    </div> -->
+    <img src="./assets/logo.png" height="45" width="45">
+    <span class="nav-spacer"></span>
+    <mat-menu #admin="matMenu">
+      <button mat-menu-item >
+        <span>Admin</span>
+      </button> 
+      <button mat-menu-item>
+      <span>Guest</span>
+    </button>  
+    </mat-menu>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>home</mat-icon>
+        <span>Dashboard</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>account_circle</mat-icon>
+        <span>View profile</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>shopping_cart</mat-icon>
+        <span>Add to cart</span>
+      </button>
+    </mat-menu>    
+    <button mat-icon-button (click)="onLoggedout()">
+      <mat-icon>exit_to_app</mat-icon>
+  </button>
+</mat-toolbar>
+
+
+<mat-sidenav-container>
+  <mat-sidenav #drawer mode="side" [(opened)]="opened">
+    <mat-nav-list>
+      <a *ngFor="let item of radioList" mat-list-item (click)="routingLink(item)">
+          <mat-icon>{{item.icon}}</mat-icon>&nbsp;
+          <span>{{item.name}}</span>
+      </a>
+  </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
