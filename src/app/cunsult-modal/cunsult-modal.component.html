@@ -1,0 +1,18 @@
+<a class="cancel" href="javascript:void(0)" (click)="close()">
+  <mat-icon>cancel</mat-icon>
+</a>
+
+<form [formGroup]="formDetalis">
+  <div class="col-mod-12">
+     <input matInput type="text" id="fullName" class="fadeIn" name="fullName" placeholder="Enter your Nane" formControlName="fullName">
+  </div>
+  <input matInput type="text" id="email" class="fadeIn" name="email" placeholder="Email-Id" formControlName="email">
+  <input matInput type="text" id="phoneNo" class="fadeIn" name="phoneNo" placeholder="Mobile No" formControlName="phoneNo">
+  <div>
+  <input matInput [matDatepicker]="picker" type="text" id="appointment_date" class="fadeIn" name="appointment_date" placeholder="Appointment Date" formControlName="appointment_date">
+  <mat-datepicker-toggle class="date" matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+  </div>
+  <input type="submit" class="fadeIn" (click)="onLogin()" value="SUBMIT">
+</form>
+                
