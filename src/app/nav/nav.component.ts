@@ -87,11 +87,13 @@ export class NavComponent implements OnInit {
   }
 
   onMenuClick(url){
-    this.modal.open(LoginComponent, {
-        height: '50%',
-        width: '33%',
-        disableClose: false
-     });
+    if (url == 'account'){
+        this.modal.open(LoginComponent, {
+            height: '50%',
+            width: '33%',
+            disableClose: false
+         });
+    }
   }
 
 }
