@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { MatDialog } from '@angular/material';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-nav',
@@ -9,10 +11,11 @@ import { Router, NavigationEnd } from '@angular/router';
 export class NavComponent implements OnInit {
   public pushRightClass: string;
    public radioList;
+   public navMenu ;
    opened = false;
 
 
-  constructor(public router: Router) {
+  constructor(public router: Router, public modal : MatDialog) {
       this.router.events.subscribe(val => {
           if (val instanceof NavigationEnd && window.innerWidth <= 992 && this.isToggled()) {
               this.toggleSidebar();
@@ -21,6 +24,28 @@ export class NavComponent implements OnInit {
   }
 
   ngOnInit() {
+      this.navMenu = [{
+          name : "Home",
+          url : "home"
+      },{
+        name : "Articles",
+        url : "articles"
+      },{
+        name : "Consultation",
+        url : "consultation"
+      },{
+        name : "Reviews",
+        url : "reviews"
+      },{
+        name : "FAQs",
+        url : "faq"
+      },{
+        name : "Contact Us",
+        url : "contact"
+      },{
+        name : "My Account",
+        url : "account"
+      }];
       this.radioList = [{
         name : "Home",
         icon : "home",
@@ -61,8 +86,12 @@ export class NavComponent implements OnInit {
       this.router.navigate(['/admin']);
   }
 
-  togglesideBar(){
-      
+  onMenuClick(url){
+    this.modal.open(LoginComponent, {
+        height: '50%',
+        width: '33%',
+        disableClose: false
+     });
   }
 
 }

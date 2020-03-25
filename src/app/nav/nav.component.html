@@ -7,7 +7,7 @@
     </div> -->
     <img src="./assets/logo.png" height="45" width="45">
     <span class="nav-spacer"></span>
-    <mat-menu #admin="matMenu">
+    <mat-menu #admin="matMenu"> 
       <button mat-menu-item >
         <span>Admin</span>
       </button> 
@@ -15,7 +15,7 @@
       <span>Guest</span>
     </button>  
     </mat-menu>
-    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+  <!--   <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
       <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
@@ -31,9 +31,13 @@
         <mat-icon>shopping_cart</mat-icon>
         <span>Add to cart</span>
       </button>
-    </mat-menu>    
+    </mat-menu>   -->  
+
+    <a  appFont *ngFor = "let menu of navMenu"class="text" href = "javascript:void(0)" (click)="onMenuClick(menu.url)">
+      <span>{{menu.name}}</span>
+    </a>
     <button mat-icon-button (click)="onLoggedout()">
-      <mat-icon>exit_to_app</mat-icon>
+      <mat-icon>shopping_cart</mat-icon>
   </button>
 </mat-toolbar>
 

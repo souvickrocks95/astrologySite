@@ -11,6 +11,9 @@ import { FooterComponent } from './footer/footer.component';
 import { AppHoverDirective } from './app-hover.directive';
 import { CunsultModalComponent } from './cunsult-modal/cunsult-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FontDirective } from './font.directive';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     DashboardComponent,
     FooterComponent,
     AppHoverDirective,
-    CunsultModalComponent
+    CunsultModalComponent,
+    FontDirective,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [
-    CunsultModalComponent
+    CunsultModalComponent,
+    LoginComponent
       ]
 })
 export class AppModule { }

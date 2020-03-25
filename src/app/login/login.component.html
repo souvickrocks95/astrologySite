@@ -1,0 +1,19 @@
+<div>
+    <h2 class="text">Login</h2>
+  </div>
+  <form [formGroup]="formDetalis">
+    <div class="col-mod-12">
+       <input matInput type="text" id="userName" class="fadeIn" name="userName" placeholder="Enter your Username" formControlName="userName">
+    </div>
+    <div>
+    <input matInput type="{{ hide ? 'password' : 'text' }}" id="Password" class="fadeIn third" name="Password" placeholder="Password" formControlName="Password">
+    <button class="password" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+    </div>
+    <input type="submit" class="fadeIn" (click)="onLogin()" value="SUBMIT">
+  </form>
+  <div style=" text-align: center;margin-top: 10px;">
+    <label>Not yet registered? <a href="javascript:void(0)" (click)="register()">Sign Up</a></label>
+  </div>
+                  
