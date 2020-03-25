@@ -93,6 +93,8 @@ export class NavComponent implements OnInit {
             width: '33%',
             disableClose: false
          });
+    }else if (url == 'home'){
+        this.router.navigate(['/home']);
     }
   }
 
