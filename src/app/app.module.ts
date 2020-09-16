@@ -3,43 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SharedModuleModule } from './shared-module/shared-module.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { FooterComponent } from './footer/footer.component';
-import { AppHoverDirective } from './app-hover.directive';
-import { CunsultModalComponent } from './cunsult-modal/cunsult-modal.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FontDirective } from './font.directive';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavComponent,
-    DashboardComponent,
-    FooterComponent,
-    AppHoverDirective,
-    CunsultModalComponent,
-    FontDirective,
-    LoginComponent,
-    RegisterComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    SharedModuleModule,
-    ReactiveFormsModule
+    AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [
-    CunsultModalComponent,
-    LoginComponent
-      ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
