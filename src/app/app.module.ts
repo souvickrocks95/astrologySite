@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatRippleModule} from '@angular/material/core';
+
 
 @NgModule({
   declarations: [
@@ -15,8 +15,8 @@ import {MatRippleModule} from '@angular/material/core';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    BrowserAnimationsModule,
-    MatRippleModule
+    BrowserAnimationsModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
