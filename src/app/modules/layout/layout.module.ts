@@ -8,14 +8,15 @@ import { DashboardComponent } from '../../components/dashboard/dashboard.compone
 import { TopbarComponent } from '../../components/topbar/topbar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { ServicesComponent } from '../../components/services/services.component';
-
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
   declarations: [LayoutComponent, DashboardComponent, TopbarComponent, FooterComponent, ServicesComponent],
   imports: [
     CommonModule,
-    LayoutRoutingModule
+    LayoutRoutingModule,
+    SharedModule
   ]
 })
 export class LayoutModule { }

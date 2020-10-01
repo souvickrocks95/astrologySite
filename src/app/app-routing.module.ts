@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LayoutComponent } from 'src/Components/layout/layout.component';
+
 
 
 const routes: Routes = [{
@@ -8,7 +8,7 @@ const routes: Routes = [{
   },
   {
     path: 'layout',
-    loadChildren: () => import('../modules/layout/layout.module').then(m => m.LayoutModule)
+    loadChildren: () => import('./modules/layout/layout.module').then(m => m.LayoutModule)
   }
 ];
 
