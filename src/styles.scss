@@ -5,3 +5,24 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import '~@angular/material/theming';
+
+// Dark theme
+$dark-primary: mat-palette($mat-blue-grey, #5c7988);
+$dark-accent:  mat-palette($mat-amber, A200, A100, A400);
+$dark-warn:    mat-palette($mat-deep-orange);
+
+$dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+.dark-theme {
+  color: white;
+  --backColor: #424242;
+  --backGroundSidebar : #212121;
+  --datepickerColor : white;
+  --popoverColor : #999797;
+  @include angular-material-theme($dark-theme);
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
