@@ -7,11 +7,12 @@ import { LayoutComponent } from '../../Components/layout/layout.component';
 import { DashboardComponent } from '../../components/dashboard/dashboard.component';
 import { TopbarComponent } from '../../components/topbar/topbar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { ServicesComponent } from '../../components/services/services.component';
 
 
 
 @NgModule({
-  declarations: [LayoutComponent, DashboardComponent, TopbarComponent, FooterComponent],
+  declarations: [LayoutComponent, DashboardComponent, TopbarComponent, FooterComponent, ServicesComponent],
   imports: [
     CommonModule,
     LayoutRoutingModule
