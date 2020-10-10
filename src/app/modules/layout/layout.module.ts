@@ -10,14 +10,17 @@ import { SharedModule } from '../shared/shared.module';
 import { FooterComponent } from '../../Components/footer/footer.component';
 import { TopbarComponent } from '../../Components/topbar/topbar.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { HighlightMenuDirective } from 'src/app/directives/highlight-menu.directive';
+import { ContactComponent } from '../../components/contact/contact.component';
+import { ReviewComponent } from '../../components/review/review.component';
 
 
 @NgModule({
-  declarations: [LayoutComponent, DashboardComponent, ServicesComponent, FooterComponent, TopbarComponent],
+  declarations: [TopbarComponent, FooterComponent, LayoutComponent, DashboardComponent, ServicesComponent, HighlightMenuDirective, ContactComponent, ReviewComponent],
   imports: [
     CommonModule,
-    LayoutRoutingModule,
     SharedModule,
+    LayoutRoutingModule,
     MDBBootstrapModule.forRoot(),
   ]
 })

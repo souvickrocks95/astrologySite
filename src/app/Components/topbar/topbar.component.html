@@ -1,4 +1,15 @@
-<mat-toolbar>
-    <mat-toolbar-row>
-        <span>Astrology</span>
-    </mat-toolbar-row>
+
+<div class="header">
+  <a href="#default" class="logo">Astrology</a>
+  <div class="header-right">
+    <ng-container *ngFor="let temp of menuList">
+      <a appHighlightMenu (onmouseover)="onMouseOver()" class="trans-btn"
+        [ngStyle]="{'color': temp.name==chooseMenu ? '#c7bd34' : 'white' }" (click)="menuChange(temp)">{{temp.name}}</a>
+    </ng-container>
+
+<!-- 
+    <a>
+      <mat-icon>login</mat-icon>
+    </a> -->
+  </div>
+</div>
